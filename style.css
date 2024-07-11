@@ -1,0 +1,203 @@
+/* Header menu bar */
+nav {
+	border-bottom: 1px solid black;
+	background-color: white
+}
+
+.crumbs ol {
+	padding-left: 0;
+}
+
+.crumb {
+	display: inline-block;
+}
+
+.crumb a::after {
+	color: #000;
+	content: '   ';
+	font-size: 100%;
+	font-weight: bold;
+	padding: 5px 30px;
+}
+.headers:hover{
+	color: orange;
+}
+
+.headers {
+	color: black;
+	font-size: 190%;
+	text-decoration: none;
+}
+
+/* Add responsiveness - on screens less than 500px, make the navigation links appear on top of each other, instead of next to each other */
+@media screen and (max-width: 900px) {
+	.crumb{
+		display: block;
+		padding: 5px 30px;
+		
+	}
+}
+
+
+/*Text and image body*/
+body{
+	padding: 0;
+	margin: 0;
+	background-color: white;
+}
+
+.slider-frame {
+    overflow: hidden;
+    height: 400px;  /* Adjusted height */
+    width: 600px;   /* Adjusted width */
+    margin-left: 60px;
+    margin-top: 20px;
+	margin-right: 25px; /* adjust distance text*/
+	margin-bottom: 25px;
+    float: left;
+}
+
+/*---------- SLIDE ANIMATION https://tutorials-warehouse.blogspot.com/2023/01/blog-post.html --------------*/
+
+@keyframes slide_animation {
+    0% { left: 0px; }
+    10% { left: 0px; }
+    20% { left: 600px; }    /* Adjusted width */
+    30% { left: 600px; }
+    40% { left: 1200px; }   /* Adjusted width */
+    50% { left: 1200px; }
+    60% { left: 600px; }
+    70% { left: 600px; }
+    80% { left: 0px; }
+    90% { left: 0px; }
+    100% { left: 0px; }
+}
+
+@-webkit-keyframes slide_animation {
+    0% { left: 0px; }
+    10% { left: 0px; }
+    20% { left: 600px; }    /* Adjusted width */
+    30% { left: 600px; }
+    40% { left: 1200px; }   /* Adjusted width */
+    50% { left: 1200px; }
+    60% { left: 600px; }
+    70% { left: 600px; }
+    80% { left: 0px; }
+    90% { left: 0px; }
+    100% { left: 0px; }
+}
+
+.slide-images {
+    width: 1800px;           /* Adjusted width for three slides */
+    height: 400px;           /* Adjusted height */
+    margin: 0 0 0 -1200px;   /* Adjusted margin */
+    position: relative;
+    -webkit-animation-name: slide_animation;
+    animation-name: slide_animation;
+    -webkit-animation-duration: 45s;
+    animation-duration: 45s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+    -webkit-animation-play-state: running;
+    animation-play-state: running;
+}
+
+.img-container {
+    height: 400px;  /* Adjusted height */
+    width: 600px;   /* Adjusted width */
+    position: relative;
+    float: left;
+}
+
+
+/* paragraph formatting */
+p {
+	position: relative;
+	font-size: 300%;
+	margin-right: 15px;
+	left: 25px;
+	top: 600px; 
+}
+
+.link {
+	color: black;
+	font-size: 200%;
+	text-decoration: none;
+	
+}
+
+.link:hover {
+	color: black;
+	/*text-shadow: 0.5px 0.5px 0.5px black;*/
+	text-decoration: underline;
+	text-decoration-color: orange;
+	/* font-weight: bold; */
+}
+
+desc {
+	display: block;
+	margin-left: 20px;
+	margin-right: 200px;
+	font-size: 20px;
+	text-align: justify;
+}
+
+@media screen and (max-width: 900px) {
+	desc {
+		margin-right: 20px;
+		margin-left: 30px;
+	}
+}
+
+/*bottom bar*/
+
+ div.terms{
+    display:block;
+
+    /*set the div in the bottom right corner*/
+    position:absolute;
+    bottom:0;
+    right:0;
+    width:100%;
+    
+    /*give it some background and border*/
+    background:#eee;
+    border:5px solid #eee;
+  }
+ 
+ .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #eee;
+    color: black;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.left, .center, .right {
+    flex: 1;
+    text-align: center;
+}
+
+.left {
+    text-align: left;
+	margin-left: 5rem;
+}
+
+.right {
+    text-align: right;
+	margin-right: 5rem;
+}
+
+@media screen and (max-width: 900px) {
+	.left, .right {
+		margin-right: 1rem;
+		margin-left: 1rem;
+	}
+}

@@ -39,6 +39,9 @@ nav {
 }
 
 
+
+
+
 /*Text and image body*/
 body{
 	padding: 0;
@@ -46,31 +49,31 @@ body{
 	background-color: white;
 }
 
-.slider-frame {
+.slider-frame { /*this is the negative space box you slide images behind */
     overflow: hidden;
     height: 400px;  /* Adjusted height */
     width: 600px;   /* Adjusted width */
     margin-left: 60px;
     margin-top: 20px;
-	margin-right: 25px; /* adjust distance text*/
+	margin-right: 25px; /* this adjusts distance of text on PC*/
 	margin-bottom: 25px;
     float: left;
 }
 
-/*---------- SLIDE ANIMATION https://tutorials-warehouse.blogspot.com/2023/01/blog-post.html --------------*/
+/*SLIDE ANIMATION https://tutorials-warehouse.blogspot.com/2023/01/blog-post.html */
 
 @keyframes slide_animation {
-    0% { left: 0px; }
-    10% { left: 0px; }
-    20% { left: 600px; }    /* Adjusted width */
-    30% { left: 600px; }
-    40% { left: 1200px; }   /* Adjusted width */
-    50% { left: 1200px; }
-    60% { left: 600px; }
-    70% { left: 600px; }
-    80% { left: 0px; }
-    90% { left: 0px; }
-    100% { left: 0px; }
+	0% { left: 0px; }
+	10% { left: 0px; }
+	15% { left: 600px; } 
+	30% { left: 600px; }
+	35% { left: 1200px; }
+	50% { left: 1200px; }
+	55% { left: 600px; }
+	70% { left: 600px; }
+	75% { left: 0px; }
+	90% { left: 0px; }
+	100% { left: 0px; }
 }
 
 @-webkit-keyframes slide_animation {
@@ -102,6 +105,7 @@ body{
     animation-direction: alternate;
     -webkit-animation-play-state: running;
     animation-play-state: running;
+	animation-timing-function: ease-in-out;
 }
 
 .img-container {
@@ -110,6 +114,7 @@ body{
     position: relative;
     float: left;
 }
+
 
 
 /* paragraph formatting */
@@ -140,7 +145,7 @@ desc {
 	display: block;
 	margin-left: 20px;
 	margin-right: 200px;
-	font-size: 20px;
+	font-size: 17px;
 	text-align: justify;
 }
 
@@ -153,9 +158,9 @@ desc {
 
 /*bottom bar*/
 
- div.terms{
+div.terms{
     display:block;
-
+	
     /*set the div in the bottom right corner*/
     position:absolute;
     bottom:0;
@@ -165,9 +170,9 @@ desc {
     /*give it some background and border*/
     background:#eee;
     border:5px solid #eee;
-  }
- 
- .footer {
+}
+
+.footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -200,4 +205,5 @@ desc {
 		margin-right: 1rem;
 		margin-left: 1rem;
 	}
+}
 }

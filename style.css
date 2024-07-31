@@ -116,7 +116,33 @@ body{
 }
 
 @media screen and (max-width: 900px) {
-	
+	.slider-frame {
+		height: 200px;
+		width: 300px; 
+	}
+	@keyframes slide_animation {
+		0% { left: 0px; }
+		10% { left: 0px; }
+		15% { left: 300px; } 
+		30% { left: 300px; }
+		35% { left: 600px; }
+		50% { left: 600px; }
+		55% { left: 300px; }
+		70% { left: 300px; }
+		75% { left: 0px; }
+		90% { left: 0px; }
+		100% { left: 0px; }
+	}
+	.img-container {
+		height: 200px;  /* Adjusted height */
+		width: 300px;  
+	}
+	.slide-images {
+		width: 900px;           /* Adjusted width for three slides */
+		height: 200px;           /* Adjusted height */
+		margin: 0 0 0 -600px;
+	}
+
 }
 
 

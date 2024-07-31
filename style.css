@@ -232,13 +232,16 @@ body{
 		margin-left: 1rem;
 	}
 	
-	.grid-small {
+	.grid-three {
 	grid-template-columns: auto;
 	padding: 5px;
 	}
 	
-	.grid-big {
+	.grid-two {
 	grid-template-columns: auto;
+	padding: 5px;
+	}
+	.grid-one {
 	padding: 5px;
 	}
 	.left, .center, .right {

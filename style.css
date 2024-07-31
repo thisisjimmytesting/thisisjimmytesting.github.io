@@ -197,20 +197,26 @@ body{
 
 
 /* Block styling */
-.grid-big {
+.grid-one {
+	display: grid;
+	grid-template-columns: auto;
+	padding: 10px;
+}
+
+.grid-two {
 	display: grid;
 	grid-template-columns: auto auto;
 	padding: 10px;
 }
 
-.grid-small {
+.grid-three {
 	display: grid;
 	grid-template-columns: auto auto auto;
 	padding: 10px;
 }
 .grid-item {
 	background-color: rgba(255, 255, 255, 0.8);
-	/* border: 1px solid rgba(0, 0, 0, 0.8); this lets you see the outline of the layout*/
+	border: 1px solid rgba(0, 0, 0, 0.8); /*this lets you see the outline of the layout*/
 	padding: 20px;
 	font-size: 20px;
 	text-align: left;
@@ -236,7 +242,7 @@ body{
 	padding: 5px;
 	}
 	.left, .center, .right {
-	font-size: 12px;
+	font-size: 14px;
 	}
 	
 }

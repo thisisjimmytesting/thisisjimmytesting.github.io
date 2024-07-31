@@ -1,4 +1,5 @@
 /* Header menu bar */
+
 nav {
 	border-bottom: 1px solid black;
 	background-color: white
@@ -29,7 +30,7 @@ nav {
 	text-decoration: none;
 }
 
-/* Add responsiveness - on screens less than 500px, make the navigation links appear on top of each other, instead of next to each other */
+/* On screens less than 900px, make nav linksbe on top of each other*/
 @media screen and (max-width: 900px) {
 	.crumb{
 		display: block;
@@ -39,9 +40,6 @@ nav {
 }
 
 
-
-
-
 /*Text and image body*/
 body{
 	padding: 0;
@@ -49,15 +47,17 @@ body{
 	background-color: white;
 }
 
+/* Image slider */
+
 .slider-frame { /*this is the negative space box you slide images behind */
     overflow: hidden;
     height: 400px;  /* Adjusted height */
     width: 600px;   /* Adjusted width */
-    margin-left: 60px;
+    /* margin-left: 60px;
     margin-top: 20px;
-	margin-right: 25px; /* this adjusts distance of text on PC*/
+	/margin-right: 25px;  this adjusts distance of text on PC
 	margin-bottom: 25px;
-    float: left;
+    float: left; */
 }
 
 /*SLIDE ANIMATION https://tutorials-warehouse.blogspot.com/2023/01/blog-post.html */
@@ -115,16 +115,12 @@ body{
     float: left;
 }
 
-
-
-/* paragraph formatting */
-p {
-	position: relative;
-	font-size: 300%;
-	margin-right: 15px;
-	left: 25px;
-	top: 600px; 
+@media screen and (max-width: 900px) {
+	
 }
+
+
+/* linked words formatting */
 
 .link {
 	color: black;
@@ -141,42 +137,14 @@ p {
 	/* font-weight: bold; */
 }
 
-desc {
-	display: block;
-	margin-left: 20px;
-	margin-right: 200px;
-	font-size: 17px;
-	text-align: justify;
-}
-
-@media screen and (max-width: 900px) {
-	desc {
-		margin-right: 20px;
-		margin-left: 30px;
-	}
-}
-
 /*bottom bar*/
-
-div.terms{
-    display:block;
-	
-    /*set the div in the bottom right corner*/
-    position:absolute;
-    bottom:0;
-    right:0;
-    width:100%;
-    
-    /*give it some background and border*/
-    background:#eee;
-    border:5px solid #eee;
-}
 
 .footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #eee;
+    background-color: orange;
+	opacity: 0.95;
     color: black;
     padding: 10px;
     position: fixed;
@@ -200,10 +168,44 @@ div.terms{
 	margin-right: 5rem;
 }
 
-@media screen and (max-width: 900px) {
+
+/* Block styling */
+.grid-big {
+	display: grid;
+	grid-template-columns: auto auto;
+	padding: 10px;
+}
+
+.grid-small {
+	display: grid;
+	grid-template-columns: auto auto auto;
+	padding: 10px;
+}
+.grid-item {
+	background-color: rgba(255, 255, 255, 0.8);
+	border: 1px solid rgba(0, 0, 0, 0.8); /*this lets you see the outline of the layout*/
+	padding: 20px;
+	font-size: 20px;
+	text-align: left;
+}	
+
+
+
+/* Mobile scaling */
+
+@media screen and (max-width: 900px) { /* this fucks with the columns!!!*/
 	.left, .right {
 		margin-right: 1rem;
 		margin-left: 1rem;
 	}
+	
+	.grid-small {
+	grid-template-columns: auto;
+	padding: 5px;
+	}
+	
+	.grid-big {
+	grid-template-columns: auto;
+	padding: 5px;
 }
 }
